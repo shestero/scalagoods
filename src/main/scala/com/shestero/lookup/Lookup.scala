@@ -32,6 +32,8 @@ trait Lookup[K, O] {
 
 object Lookup {
 
+  def apply[K, O]: (K => Option[O]) => Lookup[K, O] = pure
+
   def empty[K, O]: Lookup[K, O] = new Lookup[K, O] {
     override def get: K => Option[O] = _ => None
   }
