@@ -1,5 +1,6 @@
 package com.shestero.lookup
 
+import scala.language.implicitConversions
 import scala.collection.mutable
 import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.concurrent.duration.Duration
